@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="col-xs-12">
+    <div class="item-block">
+      <div class="item-form">
+
+        <button class="btn btn-danger btn-float btn-remove" (click)="remove()"><i class="ti-close"></i></button>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-4">
+            <div class="form-group">
+              <input type="file" class="dropify" data-default-file="assets/img/logo-default.png">
+              <span class="help-block">Please choose a square logo</span>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-8">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Company name">
+            </div>
+
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Position, e.g. UI/UX Researcher">
+            </div>
+
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon">Date from</span>
+                <input type="text" class="form-control" placeholder="e.g. 2012">
+                <span class="input-group-addon">Date to</span>
+                <input type="text" class="form-control" placeholder="e.g. 2016">
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-xs-12">
+            <quill-editor></quill-editor>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

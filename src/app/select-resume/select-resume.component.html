@@ -1,0 +1,27 @@
+<!-- Apply with resume -->
+  <section id="sec-resume">
+    <div class="container">
+
+      <header class="section-header">
+        <span>Apply with a resume</span>
+        <h2>Select a resume</h2>
+        <p>Applied for this job with one of your online available resumes</p>
+      </header>
+      
+
+      <!-- Resume item -->
+      <single-resume *ngFor="let resume of resumes"></single-resume>
+      <!-- END Resume item -->
+
+
+      <br>
+
+      <div class="row">
+        <div class="col-xs-12 col-md-3">
+          <a class="btn btn-block btn-primary" href="resume-add.html">Add new resume</a>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  <!-- END Apply with resume -->

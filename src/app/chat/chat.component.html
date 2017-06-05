@@ -1,0 +1,76 @@
+<header class="page-header bg-img" style="background-image: url('assets/img/bg-banner1.jpg');">
+  <div class="container no-shadow" *ngIf="type == 'chat'">
+    <h1 class="text-center">Chat</h1>
+    <p class="lead text-center">Say hi, drop a letter, and follow us in social media websites.</p>
+  </div>
+</header>
+<section class="chat">
+  <div class="container">
+      <div class="row">
+
+          <div class="conversation-wrap col-sm-3">
+            <h3>Channels</h3>
+
+              <div class="media conversation" *ngFor="let channel of channels"
+                [ngClass]="{
+                    active : activeChannel == channel
+                }"
+                >
+                  <div class="media-body">
+                      <h5 class="media-heading" (click)="activeChannel = channel">{{channel}}</h5>
+                      <div class="notifi" *ngIf="activeChannel != channel">
+                        <p>1</p>
+                      </div>
+                  </div>
+              </div>
+
+              <h3>School</h3>
+              <div class="media conversation">
+                  <div class="media-body">
+                      <h5 class="media-heading">@ Centrale Lyon</h5>
+                  </div>
+              </div>
+              <h3>Groupes prives <i class="fa fa-plus"></i></h3>
+              <div class="media conversation">
+                  <div class="media-body">
+                      <h5 class="media-heading">Pas de group prive</h5>
+                  </div>
+              </div>
+              <h3>Messages prives <i class="fa fa-plus"></i></h3>
+              <div class="media conversation">
+                  <div class="media-body">
+                      <h5 class="media-heading"><i class="fa fa-heart"></i> CremeBot</h5>
+                  </div>
+              </div>
+              <div class="media conversation white-icon">
+                  <div class="media-body">
+                      <h5 class="media-heading"><i class="fa fa-graduation-cap"></i> 158 ecoles</h5>
+                  </div>
+              </div>
+              <div class="media conversation white-icon">
+                  <div class="media-body">
+                      <h5 class="media-heading"><i class="fa fa-globe"></i> 5962 utilisateurs</h5>
+                  </div>
+              </div>
+          </div>
+          <div class="message-wrap col-sm-9">
+              <div class="heading">
+                <h4>{{activeChannel}}</h4>
+              </div>
+              <div class="msg-wrap">
+                  <single-message *ngFor="let message of messages"></single-message>
+              </div>
+              <div class="send-wrap ">
+                  <div class="insert">
+                    <i class="fa fa-plus"></i>
+                  </div>
+                  <textarea class="form-control send-message" rows="2" placeholder="Write a reply..."></textarea>
+                  <div class="history">
+                    <i class="fa fa-history"></i>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+  </div>
+</section>

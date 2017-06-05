@@ -1,0 +1,70 @@
+<header class="page-header">
+  <div class="container page-name">
+    <h1 class="text-center">Add your resume</h1>
+    <p class="lead text-center">Create your resume and put it online.</p>
+  </div>
+  <div class="container">
+    <add-resume-header></add-resume-header>
+  </div>
+</header>
+<add-resume-media></add-resume-media>
+<!-- Education -->
+<section class=" bg-alt">
+  <div class="container">
+
+    <header class="section-header">
+      <span>Latest degrees</span>
+      <h2>Education</h2>
+    </header>
+    <add-resume-education *ngFor="let edu of education; let i = index;" (rem)="removeEducation($event, i)"></add-resume-education>
+    <div class="col-xs-12 text-center">
+      <br>
+      <button class="btn btn-primary btn-duplicator" (click)="add()">Add education</button>
+    </div>
+  </div>
+</section>
+<!--End Education-->
+<!-- Work Experience -->
+<section>
+  <div class="container">
+    <header class="section-header">
+      <span>Past positions</span>
+      <h2>Work Experience</h2>
+    </header>
+    <add-resume-experience *ngFor="let exp of experience; let i = index;" (rem)="removeExperience($event, i)"></add-resume-experience>
+    <div class="col-xs-12 text-center">
+      <br>
+      <button class="btn btn-primary btn-duplicator" (click)="addExperience()">Add experience</button>
+    </div>
+  </div>
+</section>
+<!--End Work Experience-->
+<!-- Skills -->
+<section class=" bg-alt">
+  <div class="container">
+    <header class="section-header">
+      <span>Expertise Areas</span>
+      <h2>Skills</h2>
+    </header>
+    <add-resume-skills *ngFor="let skill of skills; let i = index;" (rem)="removeSkills($event, i)"></add-resume-skills>
+    <div class="col-xs-12 text-center">
+      <br>
+      <button class="btn btn-primary btn-duplicator" (click)="addSkill()">Add skill</button>
+    </div>
+  </div>
+</section>
+<!--End Skills-->
+<!-- Submit -->
+<section class=" bg-img" style="background-image: url('assets/img/bg-facts.jpg');">
+  <div class="container">
+    <header class="section-header">
+      <span>Are you done?</span>
+      <h2>Submit resume</h2>
+      <p>Please review your information once more and press the below button to put your resume online.</p>
+    </header>
+
+    <p class="text-center"><button class="btn btn-success btn-xl btn-round">Submit your resume</button></p>
+
+  </div>
+</section>
+<!-- END Submit -->

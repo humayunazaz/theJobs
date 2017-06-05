@@ -1,0 +1,27 @@
+<section class="bg-img bg-repeat no-overlay section-sm" style="background-image: url('assets/img/bg-pattern.png')">
+  <div class="container">
+
+    <div class="row">
+      <div class="counter col-md-3 col-sm-6">
+        <div counto [step]="1" [countTo]="6890" [countFrom]="0" [duration]="1" (countoChange)="jobs = $event"><p>{{jobs | number: "1.0"}}</p></div>
+        <h6>Jobs</h6>
+      </div>
+
+      <div class="counter col-md-3 col-sm-6">
+        <div counto [step]="1" [countTo]="1200" [countFrom]="0" [duration]="1" (countoChange)="members = $event"><p>{{members | number: "1.0"}}</p></div>
+        <h6>Members</h6>
+      </div>
+
+      <div class="counter col-md-3 col-sm-6">
+        <div counto [step]="1" [countTo]="36800" [countFrom]="0" [duration]="1" (countoChange)="resume = $event"><p>{{resume | number: "1.0"}}</p></div>
+        <h6>Resume</h6>
+      </div>
+
+      <div class="counter col-md-3 col-sm-6">
+        <div counto [step]="1" [countTo]="15400" [countFrom]="0" [duration]="1" (countoChange)="company = $event"><p>{{company | number: "1.0"}}</p></div>
+        <h6>Company</h6>
+      </div>
+    </div>
+
+  </div>
+</section>

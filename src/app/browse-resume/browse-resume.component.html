@@ -1,0 +1,40 @@
+<header class="page-header bg-img" style="background-image: url('assets/img/bg-banner1.jpg');">
+   <div class="container page-name">
+      <h1 class="text-center">Browse resumes</h1>
+      <p class="lead text-center">Use following search box to find resumes that fits your position better</p>
+    </div>
+    <div class="container">
+      <resume-list-header></resume-list-header>
+    </div>
+</header>
+<section class="no-padding-top bg-alt">
+    <div class="container">
+        <div class="col-xs-12">
+            <br>
+            <h5>We found <strong>357</strong> matches, you're watching <i>10</i> to <i>20</i></h5>
+        </div>
+        <div *ngFor="let single of singles; let i = index">
+            <browse-single-resume [index]="i"></browse-single-resume>
+        </div>
+        <!-- Page navigation -->
+          <nav class="text-center">
+            <ul class="pagination">
+              <li>
+                <a href="resume-list.html#" aria-label="Previous">
+                  <i class="ti-angle-left"></i>
+                </a>
+              </li>
+              <li><a href="resume-list.html#">1</a></li>
+              <li class="active"><a href="resume-list.html#">2</a></li>
+              <li><a href="resume-list.html#">3</a></li>
+              <li><a href="resume-list.html#">4</a></li>
+              <li>
+                <a href="resume-list.html#" aria-label="Next">
+                  <i class="ti-angle-right"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- END Page navigation -->
+    </div>
+</section>

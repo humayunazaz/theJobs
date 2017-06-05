@@ -1,0 +1,29 @@
+<header class="page-header bg-img" style="background-image: url('assets/img/bg-banner1.jpg')">
+  <div class="container">
+    <resume-detail-header></resume-detail-header>
+  </div>
+</header>
+<!-- Education -->
+<section>
+  <div class="container">
+    <header class="section-header">
+      <span>Latest degrees</span>
+      <h2>Education</h2>
+    </header>
+    <resume-education *ngFor="let education of educations"></resume-education>
+  </div>
+</section>
+<!-- END Education -->
+
+<!-- Work Experience -->
+<section class="bg-alt">
+  <div class="container">
+    <header class="section-header">
+      <span>Past positions</span>
+      <h2>Work Experience</h2>
+    </header>
+    <resume-workexperience *ngFor="let experience of experiences"></resume-workexperience>
+  </div>
+</section>
+<!-- END Work Experience -->
+<resume-skills></resume-skills>

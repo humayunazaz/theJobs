@@ -1,0 +1,97 @@
+<!-- Navigation bar -->
+ <div class="smart-nav"
+[ngClass]="{
+    'body-scrolled': scroll
+  }"
+>
+  <nav class="navbar">
+    <div class="container">
+
+      <!-- Logo -->
+      <div class="pull-left">
+        <a class="navbar-toggle" routerLink="/home" data-toggle="offcanvas"><i class="ti-menu"></i></a>
+
+        <div class="logo-wrapper">
+          <a class="logo" routerLink="/home"><img src="assets/img/logo.png" alt="logo"></a>
+          <a class="logo-alt" routerLink="/home"><img src="assets/img/logo-alt.png" alt="logo-alt"></a>
+        </div>
+
+      </div>
+      <!-- END Logo -->
+
+      <!-- User account -->
+      <div class="pull-right">
+
+        <div class="dropdown user-account">
+          <a class="dropdown-toggle" href="index-2.html#" data-toggle="dropdown">
+            <img src="assets/img/logo-envato.png" alt="avatar">
+          </a>
+
+          <ul class="dropdown-menu dropdown-menu-right">
+            <li><a href="user-login.html">Login</a></li>
+            <li><a href="user-register.html">Register</a></li>
+            <li><a href="user-forget-pass.html">Forget pass</a></li>
+            <li><a href="index-2.html#">Logout</a></li>
+          </ul>
+        </div>
+
+      </div>
+      <!-- END User account -->
+
+      <!-- Navigation menu -->
+      <ul class="nav-menu">
+        <li>
+          <a class="active" routerLink="/home">Home</a>
+          <ul>
+            <li><a class="active" routerLink="/home">Version 1</a></li>
+            <li><a routerLink="/home2">Version 2</a></li>
+          </ul>
+        </li>
+        <li>
+          <a>Position</a>
+          <ul>
+            <li><a routerLink="/browseJob1">Browse jobs - 1</a></li>
+            <li><a routerLink="/browseJob2">Browse jobs - 2</a></li>
+            <li><a routerLink="/browseJob3">Browse jobs - 3</a></li>
+            <li><a routerLink="/jobDetail">Job detail</a></li>
+            <li><a routerLink="/jobApply">Apply for job</a></li>
+            <li><a routerLink="/postJob">Post a job</a></li>
+            <li><a routerLink="/manageJob">Manage jobs</a></li>
+            <li><a routerLink="/jobCandidate">Candidates</a></li>
+          </ul>
+        </li>
+        <li>
+          <a>Resume</a>
+          <ul>
+            <li><a routerLink="/browseResume">Browse resumes</a></li>
+            <li><a routerLink="/resumeDetail">Resume detail</a></li>
+            <li><a routerLink="/addResume">Create a resume</a></li>
+            <li><a routerLink="/manageResume">Manage resumes</a></li>
+          </ul>
+        </li>
+        <li>
+          <a>Company</a>
+          <ul>
+            <li><a routerLink="/browseCompany">Browse companies</a></li>
+            <li><a routerLink="/companyDetail">Company detail</a></li>
+            <li><a routerLink="/addCompany">Create a company</a></li>
+            <li><a routerLink="/manageCompany">Manage companies</a></li>
+          </ul>
+        </li>
+        <li>
+          <a>Pages</a>
+          <ul>
+            <li><a routerLink="/blog">Blog</a></li>
+            <li><a routerLink="/singleBlog">Blog-post</a></li>
+            <li><a routerLink="/about">About</a></li>
+            <li><a routerLink="/contact">Contact</a></li>
+            <li><a routerLink="/faq">FAQ</a></li>
+            <li><a routerLink="/chat">Chat</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- END Navigation menu -->
+
+    </div>
+  </nav>
+  <!-- END Navigation bar -->

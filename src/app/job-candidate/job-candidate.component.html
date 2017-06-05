@@ -1,0 +1,16 @@
+<header class="page-header bg-img size-lg" style="background-image: url('assets/img/bg-banner1.jpg')">
+  <div class="container page-name">
+    <h1 class="text-center">Job Candidates</h1>
+    <p class="lead text-center">Use following search box to find best candidates for your openning position</p>
+  </div>
+  <div class="container">
+    <job-candidate-header></job-candidate-header>
+  </div>
+</header>
+<section class="no-padding-top bg-alt">
+  <div class="container">
+    <div class="row">
+      <single-candidate *ngFor="let single of candidates"></single-candidate>
+    </div>
+  </div>
+</section>
